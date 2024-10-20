@@ -26,7 +26,7 @@ CREATE TABLE Orders(
 );
 CREATE TABLE Order_Details(
 	orderdetail_id INT AUTO_INCREMENT PRIMARY KEY,
-	FOREIGN KEY (order_id) REFERENCE Orders(order_id) ON DELETE SET CASCADE,
-	FOREIGN KEY (book_id) REFERENCE Books(book_id) ON DELETE SET CASCADE,
+	FOREIGN KEY (order_id) REFERENCES Orders(order_id) ON DELETE SET CASCADE,
+	FOREIGN KEY (book_id) REFERENCES Books(book_id) ON DELETE SET CASCADE,
 	quantity DOUBLE NOT NULL
 );
