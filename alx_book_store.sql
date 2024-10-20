@@ -20,8 +20,8 @@ CREATE TABLE Customers(
 );
 CREATE TABLE Orders(
 	order_id INT AUTO_INCREMENT PRIMARY KEY,
-	customer_id INT
-	FOREIGN KEY (customer_id) REFERENCE Customers(customer_id) ON DELETE SET CASCADE,
+	customer_id INT,
+	FOREIGN KEY (customer_id) REFERENCES Customers(customer_id) ON DELETE SET CASCADE,
 	order_date DATE
 );
 CREATE TABLE Order_Details(
