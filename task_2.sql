@@ -22,6 +22,7 @@ CREATE TABLE IF NOT EXSTS Orders (
         order_date DATE
 	customer_id INT
 CREATE TABLE IF NOT EXISTS Order_Details (
+	book_id INT
 	orderdetail_id AUTO_INCREMENT PRIMARY KEY
 	FOREIGN KEY (order_id) REFERENCES Orders(order_id) ON DELETE SET CASCADE
 	FOREIGN KEY (book_id) REFERENCES Books(book_id) ON DELETE SET CASCADE
